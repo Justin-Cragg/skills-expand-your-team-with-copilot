@@ -1,0 +1,101 @@
+name: ❓ General Issue
+description: For issues that don't fit the other categories
+title: "[GENERAL] "
+labels: ["general", "teacher-request"]
+assignees: []
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## General Issue or Request
+        
+        If your request doesn't fit our other categories (Feature Request, Bug Report, Design Change, or Documentation), use this template.
+
+  - type: input
+    id: issue-title
+    attributes:
+      label: Issue Summary
+      description: Briefly describe what you need help with
+      placeholder: e.g., "Question about data export", "Policy change needed", "Integration request"
+    validations:
+      required: true
+
+  - type: textarea
+    id: issue-description
+    attributes:
+      label: Detailed Description
+      description: Explain your issue or request in detail
+      placeholder: |
+        Please provide as much detail as possible about:
+        - What you're trying to accomplish
+        - What challenges you're facing
+        - What outcome you're looking for
+    validations:
+      required: true
+
+  - type: dropdown
+    id: issue-category
+    attributes:
+      label: Best Category for This Issue
+      description: Which area does this relate to most closely?
+      options:
+        - System administration
+        - Data management
+        - User permissions
+        - Integration with other systems
+        - Policy or procedure question
+        - Training or support request
+        - Performance or technical issue
+        - Content or data update
+        - Other (please specify in description)
+    validations:
+      required: true
+
+  - type: textarea
+    id: acceptance-criteria
+    attributes:
+      label: Success Criteria
+      description: How will you know when this issue is resolved?
+      placeholder: |
+        Describe what success looks like:
+        - What should work differently?
+        - What should be available that isn't now?
+        - How will you test that it's working?
+    validations:
+      required: true
+
+  - type: dropdown
+    id: urgency
+    attributes:
+      label: Urgency Level
+      description: How soon do you need this resolved?
+      options:
+        - Low - Can wait for next development cycle
+        - Medium - Needed within a few weeks
+        - High - Needed soon for upcoming activities
+        - Critical - Blocking current work
+    validations:
+      required: true
+
+  - type: textarea
+    id: additional-context
+    attributes:
+      label: Additional Context
+      description: Any other information that might help address this issue
+      placeholder: |
+        Include details like:
+        - Why this is needed
+        - Who else is affected
+        - Any constraints or limitations
+        - References to similar systems or examples
+        - Timeline considerations
+
+  - type: checkboxes
+    id: confirmation
+    attributes:
+      label: Confirmation
+      options:
+        - label: I have checked if this fits better in one of the specific issue templates (Feature Request, Bug Report, Design Change, Documentation)
+          required: true
+        - label: I am available to provide clarification if needed
+          required: true

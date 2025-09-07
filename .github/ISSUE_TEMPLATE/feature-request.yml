@@ -1,0 +1,106 @@
+name: 🚀 Feature Request
+description: Request a new feature or enhancement for the school activities system
+title: "[FEATURE] "
+labels: ["enhancement", "teacher-request"]
+assignees: []
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## Request a New Feature
+        
+        Thank you for taking the time to request a new feature! This template will help you provide all the details needed for our development team to understand and implement your request.
+
+  - type: input
+    id: feature-title
+    attributes:
+      label: Feature Name
+      description: What would you like to call this new feature?
+      placeholder: e.g., "Student Difficulty Levels", "Calendar View", "Group Activities"
+    validations:
+      required: true
+
+  - type: textarea
+    id: problem-description
+    attributes:
+      label: Problem Description
+      description: What problem does this feature solve? Why do you need this feature?
+      placeholder: |
+        Example: "Teachers want to organize activities by difficulty level so students can choose appropriate challenges. Currently, all activities appear the same regardless of complexity."
+    validations:
+      required: true
+
+  - type: textarea
+    id: proposed-solution
+    attributes:
+      label: Proposed Solution
+      description: Describe how you envision this feature working
+      placeholder: |
+        Example: "Add a difficulty selector (Beginner/Intermediate/Advanced) when creating activities. Students should be able to filter activities by difficulty level."
+    validations:
+      required: true
+
+  - type: textarea
+    id: acceptance-criteria
+    attributes:
+      label: Acceptance Criteria
+      description: What specific things must work for this feature to be considered complete?
+      placeholder: |
+        Please list specific requirements like:
+        - Users can select difficulty when creating activities
+        - Activities display difficulty level on cards
+        - Filter option appears in sidebar
+        - Default shows all activities if no filter selected
+    validations:
+      required: true
+
+  - type: dropdown
+    id: priority
+    attributes:
+      label: Priority Level
+      description: How important is this feature for your teaching activities?
+      options:
+        - Low - Nice to have when time allows
+        - Medium - Would improve teaching but not urgent
+        - High - Important for upcoming semester
+        - Critical - Needed immediately for current classes
+    validations:
+      required: true
+
+  - type: dropdown
+    id: affected-users
+    attributes:
+      label: Who would use this feature?
+      multiple: true
+      options:
+        - Students viewing activities
+        - Teachers creating activities
+        - Administrators managing the system
+        - Parents checking student activities
+    validations:
+      required: true
+
+  - type: textarea
+    id: additional-context
+    attributes:
+      label: Additional Context
+      description: Any other helpful information, examples from other systems, or limitations to consider
+      placeholder: |
+        Include things like:
+        - Examples from other school systems you've seen
+        - Specific use cases or scenarios
+        - Any technical limitations you're aware of
+        - Related features that might be affected
+
+  - type: checkboxes
+    id: terms
+    attributes:
+      label: Confirmation
+      description: Please confirm you understand the development process
+      options:
+        - label: I have checked that this feature doesn't already exist
+          required: true
+        - label: I understand this request will be reviewed and prioritized with other work
+          required: true
+        - label: I am available to provide clarification if the development team has questions
+          required: true
