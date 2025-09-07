@@ -1,0 +1,161 @@
+name: 📚 Documentation Update
+description: Request updates to help text, instructions, or documentation
+title: "[DOCS] "
+labels: ["documentation", "teacher-request"]
+assignees: []
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## Request Documentation Update
+        
+        Found outdated or missing information? This template helps you request clear documentation improvements.
+
+  - type: input
+    id: docs-title
+    attributes:
+      label: Documentation Issue
+      description: What documentation needs to be updated or created?
+      placeholder: e.g., "Outdated activity creation guide", "Missing mobile app instructions", "Unclear sign-up process"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: docs-type
+    attributes:
+      label: Type of Documentation
+      description: What kind of documentation update do you need?
+      options:
+        - User guide/instructions
+        - Help text on the website
+        - Teacher training materials
+        - Student instructions
+        - Setup/getting started guide
+        - FAQ or troubleshooting
+        - Policy or procedure updates
+        - Technical documentation
+        - Video tutorials or guides
+    validations:
+      required: true
+
+  - type: textarea
+    id: current-docs-issue
+    attributes:
+      label: Current Documentation Problem
+      description: What's wrong, missing, or unclear in the current documentation?
+      placeholder: |
+        Example: "The teacher guide for creating activities is from last year and doesn't match the new interface. It shows old screenshots and missing steps for the difficulty level feature."
+    validations:
+      required: true
+
+  - type: textarea
+    id: target-audience
+    attributes:
+      label: Who Needs This Documentation?
+      description: Who will be reading or using this documentation?
+      placeholder: |
+        Example: "New teachers who need to create activities for the first time, substitute teachers using the system occasionally, and veteran teachers adapting to new features."
+    validations:
+      required: true
+
+  - type: textarea
+    id: desired-content
+    attributes:
+      label: What Should the Documentation Include?
+      description: Describe what information should be covered
+      placeholder: |
+        List specific content like:
+        - Step-by-step instructions for creating activities
+        - Screenshots of current interface
+        - How to set difficulty levels
+        - How to edit or delete activities
+        - Troubleshooting common problems
+        - Tips for engaging students
+    validations:
+      required: true
+
+  - type: dropdown
+    id: docs-priority
+    attributes:
+      label: Priority Level
+      description: How urgently is this documentation needed?
+      options:
+        - Low - Helpful improvement for future reference
+        - Medium - Would help current users but not urgent
+        - High - Needed for upcoming training or semester
+        - Critical - Blocking current teacher activities
+    validations:
+      required: true
+
+  - type: dropdown
+    id: docs-format
+    attributes:
+      label: Preferred Documentation Format
+      multiple: true
+      options:
+        - Written step-by-step guide
+        - Screenshots with annotations
+        - Video walkthrough
+        - Interactive tutorial
+        - Printable quick reference
+        - Online help within the system
+        - FAQ format
+        - Downloadable PDF guide
+    validations:
+      required: true
+
+  - type: textarea
+    id: success-criteria
+    attributes:
+      label: Documentation Success Criteria
+      description: How will you know this documentation is successful?
+      placeholder: |
+        Define success like:
+        - New teachers can create their first activity without help
+        - Reduced questions to IT support about this topic
+        - Teachers complete tasks 50% faster
+        - Documentation covers all common scenarios
+        - Content is accurate and up-to-date
+        - Available in formats teachers prefer
+    validations:
+      required: true
+
+  - type: textarea
+    id: existing-resources
+    attributes:
+      label: Existing Resources and References
+      description: Are there any current materials, examples, or resources to build from?
+      placeholder: |
+        Include information about:
+        - Current documentation that's outdated
+        - Other school systems with good examples
+        - Training materials you currently use
+        - Common questions you receive from teachers
+        - Screenshots or examples of the process
+
+  - type: textarea
+    id: additional-context
+    attributes:
+      label: Additional Context
+      description: Any other helpful information for creating this documentation
+      placeholder: |
+        Consider mentioning:
+        - Common mistakes teachers make
+        - Seasonal or timing considerations
+        - Integration with other school systems
+        - Accessibility requirements
+        - Languages needed besides English
+        - Distribution method (email, website, training)
+
+  - type: checkboxes
+    id: docs-commitment
+    attributes:
+      label: Documentation Support
+      description: Please confirm your availability to help with this documentation
+      options:
+        - label: I can review draft documentation for accuracy
+          required: true
+        - label: I can test instructions with other teachers
+          required: true
+        - label: I can provide feedback on clarity and usefulness
+          required: true

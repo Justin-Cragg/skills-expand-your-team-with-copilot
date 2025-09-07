@@ -1,0 +1,147 @@
+name: 🎨 UI/Design Change
+description: Request changes to the visual appearance, layout, or user interface
+title: "[DESIGN] "
+labels: ["design", "ui", "teacher-request"]
+assignees: []
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## Request a Design Change
+        
+        Want to improve how the system looks or feels? This template helps you describe visual and user interface changes clearly.
+
+  - type: input
+    id: design-title
+    attributes:
+      label: Design Change Request
+      description: What design element would you like to change?
+      placeholder: e.g., "Add school mascots", "Dark mode option", "Better mobile layout"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: design-category
+    attributes:
+      label: What Type of Design Change?
+      description: Select the category that best describes your request
+      options:
+        - Colors and theme
+        - Layout and spacing
+        - Typography and fonts
+        - Images and graphics
+        - Navigation and menus
+        - Mobile responsiveness
+        - Accessibility improvements
+        - Branding and school identity
+        - User interface elements
+        - Visual effects and animations
+    validations:
+      required: true
+
+  - type: textarea
+    id: current-design
+    attributes:
+      label: Current Design Issue
+      description: What about the current design needs to be changed?
+      placeholder: |
+        Example: "The website doesn't reflect our school identity. It's missing our mascots and uses generic blue colors instead of our school colors (white and lime green)."
+    validations:
+      required: true
+
+  - type: textarea
+    id: desired-design
+    attributes:
+      label: Desired Design
+      description: Describe how you want it to look or work instead
+      placeholder: |
+        Example: "Add various mascot images from GitHub's Octodex (https://octodex.github.com/) throughout the site. Use our school colors: white (#FFFFFF) and lime green (#32CD32). Maybe add animated git branch lines in the background for a tech-themed look."
+    validations:
+      required: true
+
+  - type: textarea
+    id: design-acceptance-criteria
+    attributes:
+      label: Design Acceptance Criteria
+      description: What specific design elements must be included for this to be complete?
+      placeholder: |
+        List specific requirements like:
+        - School colors (white and lime green) used throughout
+        - At least 3 different mascot images from Octodex
+        - Mascots placed in header, footer, and activity cards
+        - Background animation with git-style branch lines
+        - Design works on both desktop and mobile
+        - Maintains readability and accessibility
+    validations:
+      required: true
+
+  - type: dropdown
+    id: design-priority
+    attributes:
+      label: Priority Level
+      description: How important is this design change?
+      options:
+        - Low - Visual improvement when time allows
+        - Medium - Would enhance user experience
+        - High - Important for school branding/identity
+        - Critical - Required for upcoming school events
+    validations:
+      required: true
+
+  - type: dropdown
+    id: target-users
+    attributes:
+      label: Who will benefit from this design change?
+      multiple: true
+      options:
+        - Students browsing activities
+        - Teachers using the system
+        - Parents viewing the site
+        - School administrators
+        - Visitors to the school website
+        - Mobile users
+        - Desktop users
+    validations:
+      required: true
+
+  - type: textarea
+    id: design-examples
+    attributes:
+      label: Examples and References
+      description: Provide links, images, or examples of the design you want
+      placeholder: |
+        Include things like:
+        - Links to design examples you like
+        - Color codes or hex values
+        - Specific images or graphics to use
+        - Screenshots of similar designs
+        - School website or branding guidelines
+        
+        Example: "Use mascots from https://octodex.github.com/ - especially like the Professortocat for education theme."
+
+  - type: textarea
+    id: design-constraints
+    attributes:
+      label: Design Constraints and Considerations
+      description: Any limitations, accessibility needs, or technical considerations?
+      placeholder: |
+        Consider mentioning:
+        - Must work on mobile devices
+        - Need to maintain accessibility standards
+        - Should load quickly
+        - Must look professional for school setting
+        - Any brand guidelines to follow
+        - Budget or time constraints
+
+  - type: checkboxes
+    id: design-understanding
+    attributes:
+      label: Design Confirmation
+      description: Please confirm your understanding of the design process
+      options:
+        - label: I understand design changes may need review by school administration
+          required: true
+        - label: I can provide feedback during the design review process
+          required: true
+        - label: I have considered how this change affects all users (students, teachers, parents)
+          required: true

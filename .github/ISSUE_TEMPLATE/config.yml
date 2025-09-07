@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: 💬 Ask a Question
+    url: https://github.com/Justin-Cragg/skills-expand-your-team-with-copilot/discussions
+    about: Have a general question? Start a discussion instead of creating an issue.
+  - name: 🆘 Get Technical Support
+    url: https://github.com/Justin-Cragg/skills-expand-your-team-with-copilot/discussions/categories/support
+    about: Need help using the system? Get support from the community.

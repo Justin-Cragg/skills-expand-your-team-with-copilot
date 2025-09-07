@@ -1,0 +1,129 @@
+name: 🐛 Bug Report
+description: Report something that is broken or not working correctly
+title: "[BUG] "
+labels: ["bug", "teacher-request"]
+assignees: []
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## Report a Bug
+        
+        Found something that's not working correctly? This template will help you provide all the details needed to fix the issue quickly.
+
+  - type: input
+    id: bug-title
+    attributes:
+      label: What's Not Working?
+      description: Give a brief description of the problem
+      placeholder: e.g., "School colors are wrong", "Can't sign up for activities", "Missing mascot images"
+    validations:
+      required: true
+
+  - type: textarea
+    id: current-behavior
+    attributes:
+      label: What's Happening Now (Current Behavior)
+      description: Describe what you're seeing that's wrong or broken
+      placeholder: |
+        Example: "The website background is blue, but our school colors are white and lime green. The current design doesn't match our school branding."
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected-behavior
+    attributes:
+      label: What Should Happen Instead (Expected Behavior)
+      description: Describe what you expected to see or what should work correctly
+      placeholder: |
+        Example: "The website should use our school colors (white and lime green) throughout the design to match our school branding."
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps-to-reproduce
+    attributes:
+      label: How to See the Problem (Steps to Reproduce)
+      description: Tell us the exact steps to see this bug
+      placeholder: |
+        Please list the steps like:
+        1. Go to the main page
+        2. Look at the header background
+        3. Notice it's blue instead of school colors
+        4. Check the activity cards
+        5. See they also use wrong colors
+    validations:
+      required: true
+
+  - type: dropdown
+    id: severity
+    attributes:
+      label: How Serious Is This Issue?
+      description: How much does this problem affect your use of the system?
+      options:
+        - Low - Minor visual issue, doesn't affect functionality
+        - Medium - Noticeable problem but workarounds exist
+        - High - Significant issue affecting daily use
+        - Critical - System is unusable or causes major problems
+    validations:
+      required: true
+
+  - type: dropdown
+    id: affected-areas
+    attributes:
+      label: What Parts Are Affected?
+      multiple: true
+      options:
+        - Main page/homepage
+        - Activity listings
+        - Student sign-up process
+        - Teacher activity creation
+        - Navigation/menus
+        - Colors/styling
+        - Images/graphics
+        - Text/content
+        - Mobile version
+        - Desktop version
+    validations:
+      required: true
+
+  - type: input
+    id: browser-info
+    attributes:
+      label: What Browser Are You Using?
+      description: Help us understand your technical setup
+      placeholder: e.g., "Chrome on Windows laptop", "Safari on iPad", "Firefox on Mac"
+    validations:
+      required: false
+
+  - type: textarea
+    id: additional-info
+    attributes:
+      label: Additional Information
+      description: Any other details that might help fix this bug
+      placeholder: |
+        Include things like:
+        - Screenshots or examples of the problem
+        - Links to correct examples (like school website with right colors)
+        - When you first noticed this issue
+        - Whether this worked correctly before
+        - Any error messages you see
+
+  - type: textarea
+    id: suggested-fix
+    attributes:
+      label: Suggested Fix (Optional)
+      description: If you have ideas about how to fix this, let us know!
+      placeholder: |
+        Example: "Use color code #32CD32 for lime green and #FFFFFF for white. The school website at [URL] shows the correct color scheme."
+
+  - type: checkboxes
+    id: confirmation
+    attributes:
+      label: Confirmation
+      description: Please confirm a few things to help us process this bug report
+      options:
+        - label: I have checked that this isn't already reported as a known issue
+          required: true
+        - label: I can provide more details if the development team needs clarification
+          required: true
